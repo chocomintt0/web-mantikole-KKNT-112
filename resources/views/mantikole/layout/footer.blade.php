@@ -26,17 +26,11 @@
 
                 <div class="space-y-4">
                     <h4 class="font-bold text-lg text-white tracking-wide inline-block hover:text-white transition-all duration-300 transform hover:-translate-y-0.5">Kontak & Media</h4>
-                    <p class="text-sm text-gray-400">Jl. Desa Mantikole, Kec. Banawa, Kab. Donggala<br>
-                        Email: <a href="mailto:info@mantikole.com" class="hover:text-blue-400 transition-colors duration-200">info@mantikole.com</a></p>
+                    <p class="text-sm text-gray-400">Desa Mantikole, Kec. Dolo Barat , Kab. Sigi<br>
+                        Email: <a href="mailto:info@mantikole.com" class="hover:text-blue-400 transition-colors duration-200">mantikole1965@gmail.com</a></p>
                     <div class="flex justify-center md:justify-start space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110" aria-label="Facebook">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.923c0-.854.183-1.077 1.05-1.077h2.95v-4h-4c-3.136 0-4 1.134-4 3.513v2.487z"/></svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110" aria-label="Instagram">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.013 4.85.074 3.252.148 4.772 1.668 4.92 4.92.061 1.266.074 1.646.074 4.85s-.013 3.584-.074 4.85c-.148 3.252-1.668 4.772-4.92 4.92-.061 1.266-.074 1.646-.074 4.85s.013 3.584.074 4.85c.148 3.252-1.668 4.772-4.92 4.92z"/></svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110" aria-label="YouTube">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.32 10.97l-6.36 3.66a1 1 0 01-1.5-1.5v-7.32a1 1 0 011.5-1.5l6.36 3.66a1 1 0 010 1.66z"/></svg>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110" aria-label="instagram">
+                            <img src="images/icons/instagram (1).png" alt="" class="w-7 h-7">
                         </a>
                     </div>
                 </div>
