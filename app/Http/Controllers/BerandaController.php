@@ -14,7 +14,7 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        return view('mantikole.pages.beranda.index');
+        return view('mantikole.pages.beranda');
     }
 
     /**
