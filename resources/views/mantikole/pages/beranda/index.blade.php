@@ -346,8 +346,8 @@
                         <img src="{{ asset('images/2.jpg') }}" alt="kegiatan2" class="w-full h-52 object-cover pointer-events-none">
                         <div class="p-5 text-center pointer-events-none"><h3 class="font-semibold text-xl truncate">Kegiatan 2</h3></div>
                     </div>
-                    <div class="gallery-item min-w-[240px] md:min-w-[300px] bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex-shrink-0 cursor-pointer" data-title="Kegiatan 3: Anak-Anak Bermain" data-description="Keceriaan anak-anak desa saat bermain di tepi sungai yang jernih dan asri." data-img-src="{{ asset('images/3.jpg') }}">
-                        <img src="{{ asset('images/3.jpg') }}" alt="kegiatan3" class="w-full h-52 object-cover pointer-events-none">
+                    <div class="gallery-item min-w-[240px] md:min-w-[300px] bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex-shrink-0 cursor-pointer" data-title="Kegiatan 3: Anak-Anak Bermain" data-description="Keceriaan anak-anak desa saat bermain di tepi sungai yang jernih dan asri." data-img-src="{{ asset('images/3.JPG') }}">
+                        <img src="{{ asset('images/3.JPG') }}" alt="kegiatan3" class="w-full h-52 object-cover pointer-events-none">
                         <div class="p-5 text-center pointer-events-none"><h3 class="font-semibold text-xl truncate">Kegiatan 3</h3></div>
                     </div>
                     <div class="gallery-item min-w-[240px] md:min-w-[300px] bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex-shrink-0 cursor-pointer" data-title="Kegiatan 4: Sunset di Desa" data-description="Pemandangan matahari terbenam yang memukau dilihat dari salah satu sudut Desa Mantikole." data-img-src="{{ asset('images/4.jpg') }}">
@@ -358,8 +358,8 @@
                         <img src="{{ asset('images/5.jpg') }}" alt="kegiatan5" class="w-full h-52 object-cover pointer-events-none">
                         <div class="p-5 text-center pointer-events-none"><h3 class="font-semibold text-xl truncate">Kegiatan 5</h3></div>
                     </div>
-                    <div class="gallery-item min-w-[240px] md:min-w-[300px] bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex-shrink-0 cursor-pointer" data-title="Kegiatan 6: Upacara Adat" data-description="Salah satu upacara adat yang masih dilestarikan oleh masyarakat Desa Mantikole hingga saat ini." data-img-src="{{ asset('images/posyandu.jpg') }}">
-                        <img src="{{ asset('images/posyandu.jpg') }}" alt="kegiatan6" class="w-full h-52 object-cover pointer-events-none">
+                    <div class="gallery-item min-w-[240px] md:min-w-[300px] bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex-shrink-0 cursor-pointer" data-title="Kegiatan 6: Upacara Adat" data-description="Salah satu upacara adat yang masih dilestarikan oleh masyarakat Desa Mantikole hingga saat ini." data-img-src="{{ asset('images/posyandu.JPG') }}">
+                        <img src="{{ asset('images/posyandu.JPG') }}" alt="kegiatan6" class="w-full h-52 object-cover pointer-events-none">
                         <div class="p-5 text-center pointer-events-none"><h3 class="font-semibold text-xl truncate">Kegiatan 6</h3></div>
                     </div>
                 </div>
