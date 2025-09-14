@@ -9,9 +9,10 @@ use App\Http\Controllers\AdminLayananController;
 use App\Http\Controllers\PublicBeritaController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('beranda');
-// });
+Route::get('/', function () {
+    return view('mantikole.pages.beranda');
+});
+
 
 Route::resource('beranda', BerandaController::class);
 Route::resource('profil-desa', ProfilDesaController::class);
