@@ -24,6 +24,3 @@ class UpdateAdminBeritaRequest extends FormRequest
         ];
     }
 }
-
-
-

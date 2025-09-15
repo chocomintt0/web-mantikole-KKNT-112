@@ -102,7 +102,7 @@
             fileName.textContent = file.name;
             const reader = new FileReader();
             reader.onload = function(e) {
-                previewContainer.innerHTML = `<img src="${e.target.result}" class="h-32 rounded-lg object-cover">`;
+                previewContainer.innerHTML = <img src="${e.target.result}" class="h-32 rounded-lg object-cover">;
             }
             reader.readAsDataURL(file);
         } else {

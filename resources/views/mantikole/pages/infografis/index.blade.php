@@ -106,7 +106,7 @@
                             <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-4">
                                 <p class="text-sm text-blue-900 leading-relaxed"><strong class="font-semibold">Analisis:</strong> Kelompok umur 11-20 tahun merupakan kelompok terbesar dengan total 255 jiwa, menunjukkan populasi desa yang relatif muda. Sebaliknya, kelompok usia 61+ adalah yang terendah (71 jiwa), mengindikasikan bonus demografi yang potensial.</p>
                             </div>
-                            <p class="text-xs text-gray-400 text-right mt-2 italic">*Sumber: Data Kependudukan Desa per September 2025</p>
+                            <p class="text-xs text-gray-400 text-right mt-2 italic">*Sumber: Data Kependudukan Desa per September 2024</p>
                         </div>
                     </div>
 
@@ -118,7 +118,7 @@
                         <div class="mt-8 bg-slate-100 rounded-xl p-4 shadow-inner max-w-2xl mx-auto">
                             <img src="{{ asset('images/chart jumlah masyarakat per dusun.png') }}" alt="Grafik Penduduk per Dusun" class="w-full rounded-md">
                         </div>
-                        <p class="text-xs text-gray-400 text-right mt-2 italic max-w-3xl mx-auto">*Sumber: Data Kependudukan Desa per September 2025</p>
+                        <p class="text-xs text-gray-400 text-right mt-2 italic max-w-3xl mx-auto">*Sumber: Data Kependudukan Desa per September 2024</p>
                     </div>
                 </div>
 

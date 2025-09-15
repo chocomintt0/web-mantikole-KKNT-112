@@ -27,11 +27,9 @@
                                     {{ $item['isi'] }}
                                 </p>
 
-                                <button
-                                    onclick="openModal('{{ $item['judul'] }}', '{{ $item['gambar'] }}', @js($item['isi']))"
-                                    class="text-blue-600 mt-3 inline-block font-medium hover:underline">
-                                    Baca selengkapnya →
-                                </button>
+                                <a href="{{ route('berita.show', $item['slug']) }}" class="text-blue-600 mt-3 inline-block font-medium hover:underline">
+                                        Baca selengkapnya →
+                                </a>
                             </div>
                         </div>
                     @empty
@@ -164,36 +162,85 @@
 
             {{-- Form Pengaduan --}}
             <div>
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-blue-800 mb-3">Form Pengaduan</h2>
-                    <p class="text-gray-600">Sampaikan aspirasi, kritik, dan saran Anda kepada pemerintah desa</p>
-                </div>
-                <div class="max-w-2xl mx-auto">
-                    <form action="#" method="POST"
-                        class="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600 space-y-6">
-                        @csrf
-                        <div>
-                            <label class="block text-gray-700 font-semibold">Nama</label>
-                            <input type="text" name="nama"
-                                class="w-full mt-2 border rounded-xl p-3 focus:ring-2 focus:ring-blue-300 focus:border-blue-500"
-                                placeholder="Masukkan nama Anda" required>
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-semibold">Isi Pengaduan</label>
-                            <textarea name="isi" rows="5"
-                                class="w-full mt-2 border rounded-xl p-3 focus:ring-2 focus:ring-blue-300 focus:border-blue-500"
-                                placeholder="Tuliskan pengaduan Anda..." required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit"
-                                class="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition">
-                                Kirim Pengaduan
-                            </button>
-                        </div>
-                    </form>
-                </div>
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-blue-800 mb-3">Form Pengaduan</h2>
+                <p class="text-gray-600">Sampaikan aspirasi, kritik, dan saran Anda kepada pemerintah desa</p>
             </div>
 
+            <div class="max-w-2xl mx-auto">
+                <form name="submit-to-google-sheet" action="#" method="POST"
+                    class="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600 space-y-6">
+                @csrf
+                <div>
+                    <label class="block text-gray-700 font-semibold">Nama</label>
+                    <input type="text" name="nama"
+                        class="w-full mt-2 border rounded-xl p-3 focus:ring-2 focus:ring-blue-300 focus:border-blue-500"
+                        placeholder="Masukkan nama Anda" required>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Isi Pengaduan</label>
+                    <textarea name="isi" rows="5"
+                            class="w-full mt-2 border rounded-xl p-3 focus:ring-2 focus:ring-blue-300 focus:border-blue-500"
+                            placeholder="Tuliskan pengaduan Anda..." required></textarea>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <button id="btn-submit" type="submit"
+                            class="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold shadow hover:bg-blue-700 transition">
+                    Kirim Pengaduan
+                    </button>
+                    <span id="msg" class="text-sm text-gray-600"></span>
+                </div>
+                </form>
+            </div>
+            </div>
         </div>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxX99PnPkAP1ZllQ80pIPuInUWeHXZwwkJj1rVFlucPZJNJKN9CTiSpFkELrBsT9Xm3/exec';
+
+            const form = document.forms['submit-to-google-sheet'];
+            const msg = document.getElementById('msg');
+            const btn = document.getElementById('btn-submit');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // UX: set loading state
+                const prevText = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'Mengirim...';
+                msg.textContent = '';
+
+                try {
+                const res = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form), // otomatis kirim name=value sesuai input
+                });
+
+                // Opsional: baca JSON balasan
+                let ok = res.ok;
+                try {
+                    const data = await res.json();
+                    ok = ok && data?.success !== false;
+                } catch (_) {
+                    // jika bukan JSON, anggap saja sukses bila status OK
+                }
+
+                if (!ok) throw new Error('Gagal submit');
+
+                msg.textContent = 'Terima kasih! Pengaduan Anda sudah kami terima.';
+                form.reset();
+                setTimeout(() => (msg.textContent = ''), 1000);
+                } catch (err) {
+                console.error(err);
+                msg.textContent = 'Terjadi kesalahan. Silakan coba lagi.';
+                } finally {
+                btn.disabled = false;
+                btn.textContent = prevText;
+                }
+            });
+        </script>
     </section>
 @endsection

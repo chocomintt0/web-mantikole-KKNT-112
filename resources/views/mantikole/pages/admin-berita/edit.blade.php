@@ -1,4 +1,4 @@
-@extends('mantikole.layout.app')
+@extends('mantikole.layout.admin')
 
 @section('content')
 <section class="py-12 px-4">

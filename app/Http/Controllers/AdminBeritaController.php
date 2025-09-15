@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AdminBerita;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\StoreAdminBeritaRequest;   // ← ganti
-use App\Http\Requests\UpdateAdminBeritaRequest;  // ← ganti
+use App\Http\Requests\StoreAdminBeritaRequest;   
+use App\Http\Requests\UpdateAdminBeritaRequest;  
 
 class AdminBeritaController extends Controller
 {
@@ -69,7 +69,6 @@ class AdminBeritaController extends Controller
         return redirect()->route('admin-berita.index')->with('success','Berita berhasil dihapus.');
     }
 
-    // app/Http/Controllers/AdminBeritaController.php
     public function publicShow(string $slug)
     {
         $berita = \App\Models\AdminBerita::where('slug', $slug)->firstOrFail();
@@ -77,4 +76,3 @@ class AdminBeritaController extends Controller
     }
 
 }
-
